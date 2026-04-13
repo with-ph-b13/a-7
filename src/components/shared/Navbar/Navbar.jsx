@@ -1,6 +1,6 @@
 import React from 'react';
 import navLogo from '../../../assets/logo.png'
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import { IoMdHome } from 'react-icons/io';
 import { FaHome } from 'react-icons/fa';
 import { CiStopwatch } from 'react-icons/ci';
@@ -17,9 +17,9 @@ const Navbar = () => {
     <nav className=" bg-base-100 shadow-sm">
       <div className="container mx-auto navbar">
 
-        <div className=" hidden md:flex flex-1">
+        <Link to={'/'} className=" hidden md:flex flex-1">
           <img src={navLogo} width={141} height={31} fetchpriority="high" alt=""  decoding="async" decoding="async" decoding="async"/>
-        </div>
+        </Link>
         <div className="flex-none">
           <ul className="flex items-center px-1 gap-5 text-[#64748B]">
             {links}
