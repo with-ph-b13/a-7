@@ -1,8 +1,14 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { Link } from 'react-router';
+import { FriendsContext } from '../../../context/FriendsProvider';
 
 const FriendCard = ({ friend }) => {
-    console.log(friend);
+
+    const {friendsData,setFriendsData}=useContext(FriendsContext);
+
+    
+    
+
     const { picture, name, email, days_since_contact, status, tags, next_due_date, bio, goal,id } = friend;
     return (
         <Link to={`/friends/${id}`} className="card border border-gray-200 shadow-xl">
