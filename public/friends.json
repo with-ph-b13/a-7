@@ -1,0 +1,122 @@
+[
+  {
+    "id": 1,
+    "name": "Abu Nayim Faisal",
+    "picture": "https://randomuser.me/api/portraits/men/32.jpg",
+    "email": "nayim.faisal@email.com",
+    "days_since_contact": 18,
+    "status": "overdue",
+    "tags": [
+      "University",
+      "Best Friend"
+    ],
+    "bio": "Met during our undergrad at BUET. Currently working as a senior developer and always has great career advice.",
+    "goal": 14,
+    "next_due_date": "2025-07-14"
+  },
+  {
+    "id": 2,
+    "name": "Nadia Sultana Chowdhury",
+    "picture": "https://randomuser.me/api/portraits/women/44.jpg",
+    "email": "nadia.sultana@email.com",
+    "days_since_contact": 6,
+    "status": "on-track",
+    "tags": [
+      "High School",
+      "Architect"
+    ],
+    "bio": "A brilliant architect whom I've known since high school. We share a common interest in modern structural designs.",
+    "goal": 14,
+    "next_due_date": "2025-07-22"
+  },
+  {
+    "id": 4,
+    "name": "Ariful Haque Siddique",
+    "picture": "https://randomuser.me/api/portraits/men/46.jpg",
+    "email": "ariful.haque@email.com",
+    "days_since_contact": 27,
+    "status": "overdue",
+    "tags": [
+      "Colleague",
+      "Tech Enthusiast"
+    ],
+    "bio": "Former teammate at my first tech job. He\u2019s now leading an engineering team and we often discuss new frameworks.",
+    "goal": 21,
+    "next_due_date": "2025-07-05"
+  },
+  {
+    "id": 5,
+    "name": "Mehnaz Perveen Rakhi",
+    "picture": "https://randomuser.me/api/portraits/women/12.jpg",
+    "email": "mehnaz.rakhi@email.com",
+    "days_since_contact": 10,
+    "status": "on-track",
+    "tags": [
+      "Childhood Friend",
+      "Doctor"
+    ],
+    "bio": "My childhood friend who is now a practicing physician. She\u2019s extremely busy but always makes time for a monthly catch-up.",
+    "goal": 14,
+    "next_due_date": "2025-07-18"
+  },
+  {
+    "id": 6,
+    "name": "Shahadat Hossain Bhuiyan",
+    "picture": "https://randomuser.me/api/portraits/men/50.jpg",
+    "email": "shahadat.bhuiyan@email.com",
+    "days_since_contact": 13,
+    "status": "almost due",
+    "tags": [
+      "Mentor",
+      "Project Manager"
+    ],
+    "bio": "A professional mentor who guided me through my early project management challenges. Currently staying in Chittagong.",
+    "goal": 14,
+    "next_due_date": "2025-07-15"
+  },
+  {
+    "id": 7,
+    "name": "Sadia Afrin Shanta",
+    "picture": "https://randomuser.me/api/portraits/women/68.jpg",
+    "email": "sadia.shanta@email.com",
+    "days_since_contact": 42,
+    "status": "overdue",
+    "tags": [
+      "Volunteering",
+      "Social Worker"
+    ],
+    "bio": "Met during a climate change awareness event. She is very passionate about community development and environmental policy.",
+    "goal": 30,
+    "next_due_date": "2025-06-28"
+  },
+  {
+    "id": 8,
+    "name": "Tanvir Ahmed Khan",
+    "picture": "https://randomuser.me/api/portraits/men/17.jpg",
+    "email": "tanvir.khan@email.com",
+    "days_since_contact": 4,
+    "status": "on-track",
+    "tags": [
+      "Business Partner",
+      "College"
+    ],
+    "bio": "Met in college and now running a successful tech startup. We catch up frequently to discuss entrepreneurial ideas.",
+    "goal": 10,
+    "next_due_date": "2025-07-20"
+  },
+  {
+    "id": 9,
+    "name": "Nusrat Jahan Mim",
+    "picture": "https://randomuser.me/api/portraits/women/21.jpg",
+    "email": "nusrat.mim@email.com",
+    "days_since_contact": 19,
+    "status": "almost due",
+    "tags": [
+      "Artist",
+      "Close Friend"
+    ],
+    "bio": "A talented graphic designer and a long-time friend. We usually talk about art, branding, and latest design trends.",
+    "goal": 21,
+    "next_due_date": "2025-07-17"
+  }
+]
