@@ -6,6 +6,7 @@ import { MdAutoDelete, MdOutlineUnarchive } from 'react-icons/md';
 import TimeBoard from './TimeBoard/TimeBoard';
 import ContactGoal from './ContactGoal/ContactGoal';
 import QuicCkIn from './QuicCkIn/QuicCkIn';
+import RecentInteractions from '../../components/RecentInteractions/RecentInteractions';
 
 const friendsPromise = fetch('/friends.json').then(res => res.json());
 
@@ -20,7 +21,7 @@ const FriendDetails = () => {
     return (
         <div className="container mx-auto mt-10">
 
-            <div className='grid grid-cols-4 gap-3.5 px-14  h-[60vh]'>
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-3.5 px-14 '>
                 {/* left side */}
                 <div className="col-span-1 ">
                     <Link to={`/friends/${id}`} className="card border bg-base-100 border-gray-200 shadow">
@@ -70,6 +71,7 @@ const FriendDetails = () => {
                   <TimeBoard filteredFriend={filteredFriend}/>
                   <ContactGoal filteredFriend={filteredFriend}/>
                   <QuicCkIn name={name}/>
+                  <RecentInteractions name={name}/>
                 </div>
 
             </div>
