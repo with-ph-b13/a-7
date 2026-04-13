@@ -69,7 +69,7 @@ const FriendDetails = () => {
                 <div className=" col-span-3">
                   <TimeBoard filteredFriend={filteredFriend}/>
                   <ContactGoal filteredFriend={filteredFriend}/>
-                  <QuicCkIn/>
+                  <QuicCkIn name={name}/>
                 </div>
 
             </div>

@@ -7,14 +7,17 @@ export const FriendsContext=createContext();
 const FriendsProvider = ({children}) => {
 
     const [friendsData,setFriendsData]=useState([]);
+    const [call,setCall]=useState([]);
 
 
     const data={
         friendsData,
-        setFriendsData
+        setFriendsData,
+        call,
+        setCall
     }
 
-
+    
     return (
         <FriendsContext.Provider value={data}>
             {children}
