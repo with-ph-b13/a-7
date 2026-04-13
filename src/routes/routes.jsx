@@ -1,13 +1,24 @@
 import { createBrowserRouter } from "react-router";
 import { RouterProvider } from "react-router/dom";
 import MainLayout from "../layouts/MainLayout";
+import Home from "../pages/HomePage/Home";
+import TimeLine from "../pages/TimeLine/TimeLine";
+import Stats from "../pages/Stats/Stats";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     Component: MainLayout,
     children:[
-        {index:true,element: <h1>home</h1>}
+        {index:true,element: <Home/>},
+        {
+          path:'/timeline',
+          element:<TimeLine/>
+        },
+        {
+          path:'/stats',
+          element:<Stats/>
+        }
     ]
   },
 ]);
