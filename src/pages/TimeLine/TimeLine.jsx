@@ -10,7 +10,7 @@ const TimeLine = () => {
         <div className='container mx-auto mt-10'>
             <h1 className='text-5xl font-bold'>Timeline </h1>
             {
-                call.length > 1 ? <div>
+                call.length >= 1 ? <div>
                     {
                         call.map(callNotification => {
                             return <div className="w-full px-5 py-2 border border-gray-300 shadow rounded-2xl flex items-center gap-5 mt-4">
