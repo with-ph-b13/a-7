@@ -1,5 +1,5 @@
 import React, { useContext } from 'react';
-import { Pie, PieChart, Tooltip } from 'recharts';
+import { Legend, Pie, PieChart, Tooltip } from 'recharts';
 import { FriendsContext } from '../../context/FriendsProvider';
 const Stats = () => {
     
@@ -9,9 +9,9 @@ const Stats = () => {
     const videoData=call.filter(videoInfo=>videoInfo.type === "Video");
 
     const data = [
-  { name: 'Calls', value: callData.length, fill: '#0088FE' },
-  { name: 'Text', value: textData.length, fill: '#00C49F' },
-  { name: 'Video', value: videoData.length, fill: '#FFBB28' },
+  { name: 'Calls', value: callData.length, fill: '#244D3F' },
+  { name: 'Text', value: textData.length, fill: '#7E35E1' },
+  { name: 'Video', value: videoData.length, fill: '#37A163' },
   
 ];
     
@@ -20,6 +20,11 @@ const Stats = () => {
         <div className='container mx-auto'>
             <h1 className='font-bold text-5xl mt-5'>Friendship Analytics</h1>
 
+            {
+              call.length === 0 && <div className="text-center mt-30">
+              <h1 className='text-3xl'>Empty</h1>
+            </div>
+            }
             <div className="flex flex-col justify-center items-center mt-15">
                  <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
       <Pie
@@ -36,6 +41,9 @@ const Stats = () => {
         
       />
     <Tooltip />
+      <div className="mt-5">
+        <Legend/>
+      </div>
     </PieChart>
             </div>
         </div>
