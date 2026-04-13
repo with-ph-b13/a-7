@@ -1,4 +1,4 @@
-import React, { createContext, useState } from 'react';
+import React, { createContext } from 'react';
  
 // create context
 export const FriendsContext=createContext();
@@ -6,18 +6,13 @@ export const FriendsContext=createContext();
 
 const FriendsProvider = ({children}) => {
 
-    const [friendsData,setFriendsData]=useState([]);
-    const [call,setCall]=useState([]);
 
 
     const data={
-        friendsData,
-        setFriendsData,
-        call,
-        setCall
+        name:'mim'
     }
 
-    
+
     return (
         <FriendsContext.Provider value={data}>
             {children}
