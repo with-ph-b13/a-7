@@ -7,16 +7,7 @@ import { LuPackageOpen } from 'react-icons/lu';
 const TimeLine = () => {
     const { call, setCall } = useContext(FriendsContext);
 
-    const handleNewToOldSort=()=>{
-        const newToOld=[...call].sort((a,b)=> {
-            console.log(a,b);
-            
-            return new Date(b.date) - new Date(a.date)
-        })
-        setCall([...newToOld]);
-        
-    }
-
+   
 
 
     return (
@@ -25,7 +16,7 @@ const TimeLine = () => {
             <details className="dropdown mt-4">
                 <summary className="btn m-1">Filter timeline</summary>
                 <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li onClick={()=>handleNewToOldSort()}><a>Oldest to Newest</a></li>
+                    <li><a>Oldest to Newest</a></li>
                     <li><a>Newest To Oldest</a></li>
                 </ul>
             </details>
