@@ -24,7 +24,7 @@ const QuicCkIn = ({ name }) => {
         <div>
             <div className=' mt-5 px-4 py-8 rounded-2xl shadow border border-gray-200'>
                 <p className='font-medium text-lg'>Quick Check-In</p>
-                <div className="flex gap-4 mt-3">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-4 mt-3">
                     <div onClick={() => handleAddCalls("Call")} className="px-4 cursor-pointer  py-8 w-full gap-2.5 rounded-2xl shadow border border-gray-200 flex flex-col items-center justify-center">
                         <div>
                             <img src={callImg} width={40} height={40} alt=""  loading="lazy" decoding="async"/>

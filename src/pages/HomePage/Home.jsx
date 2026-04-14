@@ -4,7 +4,7 @@ import AllFriends from '../../components/Friends/AllFriends';
 
 const Home = () => {
     return (
-        <div className='container mx-auto px-5 md:px-0'>
+        <div className='container mx-auto px-2.5 md:px-0'>
             <Banner/>
             <hr className='my-4 text-gray-300 font-bold'/>
             <AllFriends/>

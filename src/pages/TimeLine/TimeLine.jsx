@@ -6,9 +6,29 @@ import { FriendsContext } from '../../context/FriendsProvider';
 import { LuPackageOpen } from 'react-icons/lu';
 const TimeLine = () => {
     const { call, setCall } = useContext(FriendsContext);
+
+    const handleNewToOldSort=()=>{
+        const newToOld=[...call].sort((a,b)=> {
+            console.log(a,b);
+            
+            return new Date(b.date) - new Date(a.date)
+        })
+        setCall([...newToOld]);
+        
+    }
+
+
+
     return (
         <div className='container mx-auto mt-10 px-4 md:px-0'>
             <h1 className='text-5xl font-bold'>Timeline </h1>
+            <details className="dropdown mt-4">
+                <summary className="btn m-1">Filter timeline</summary>
+                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                    <li onClick={()=>handleNewToOldSort()}><a>Oldest to Newest</a></li>
+                    <li><a>Newest To Oldest</a></li>
+                </ul>
+            </details>
             {
                 call.length >= 1 ? <div>
                     {
@@ -37,9 +57,9 @@ const TimeLine = () => {
                         })
                     }
 
-                </div> :<div className='w-full px-5 py-2 border border-gray-300 shadow rounded-2xl flex justify-center mt-3.5 items-center min-h-[60vh]'>
-                        <h1 className='text-center text-3xl flex items-center gap-3'><LuPackageOpen /> Timeline is empty</h1>
-                    </div>
+                </div> : <div className='w-full px-5 py-2 border border-gray-300 shadow rounded-2xl flex justify-center mt-3.5 items-center min-h-[60vh]'>
+                    <h1 className='text-center text-3xl flex items-center gap-3'><LuPackageOpen /> Timeline is empty</h1>
+                </div>
             }
 
         </div>

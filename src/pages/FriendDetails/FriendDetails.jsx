@@ -21,7 +21,7 @@ const FriendDetails = () => {
     return (
         <div className="container mx-auto mt-10">
 
-            <div className='grid grid-cols-1 lg:grid-cols-4 gap-3.5 px-14 '>
+            <div className='grid grid-cols-1 lg:grid-cols-4 gap-3.5 px-5 '>
                 {/* left side */}
                 <div className="col-span-1 ">
                     <Link to={`/friends/${id}`} className="card border bg-base-100 border-gray-200 shadow">

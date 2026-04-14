@@ -15,8 +15,8 @@ const RecentInteractions = ({name}) => {
     
     return (
         <div className='mt-8 border border-gray-300 shadow rounded-2xl p-3'>
-                    <div className="flex justify-between">
-                        <h1 className='text-xl text-gray-500 font-bold'>Recent Interactions</h1>
+                    <div className="flex justify-between items-center flex-col md:flex-row gap-3.5">
+                        <h1 className='md:text-xl text-gray-500 font-bold'>Recent Interactions</h1>
                         <button className='btn flex items-center'><FaHistory /> Full History</button>
                     </div>
                    

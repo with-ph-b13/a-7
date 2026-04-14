@@ -25,6 +25,9 @@ const Stats = () => {
               <h1 className='text-3xl'>Empty</h1>
             </div>
             }
+            <div className="border-2 border-gray-200 rounded-2xl p-10 mt-3">
+
+              <h1 className='text-gray-600 text-2xl'>By Interaction Type</h1>
             <div className="flex flex-col justify-center items-center mt-15">
                  <PieChart style={{ width: '100%', maxWidth: '500px', maxHeight: '80vh', aspectRatio: 1 }} responsive>
       <Pie
@@ -39,13 +42,14 @@ const Stats = () => {
         dataKey="value"
         isAnimationActive={true}
         
-      />
+        />
     <Tooltip />
       <div className="mt-5">
         <Legend/>
       </div>
     </PieChart>
             </div>
+        </div>
         </div>
     );
 };

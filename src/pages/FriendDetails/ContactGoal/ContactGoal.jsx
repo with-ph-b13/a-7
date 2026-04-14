@@ -5,7 +5,7 @@ const ContactGoal = ({filteredFriend}) => {
     return (
         <div>
             <div className=' mt-5 px-4 py-8 rounded-2xl shadow border border-gray-200'>
-               <div className="flex justify-between">
+               <div className="flex flex-col-reverse md:flex-row gap-3 justify-between">
                  <p className='font-medium text-lg'>Relationship Goal</p>
                 <button className='btn'>Edit</button>
                </div>
