@@ -7,7 +7,18 @@ import { LuPackageOpen } from 'react-icons/lu';
 const TimeLine = () => {
     const { call, setCall } = useContext(FriendsContext);
 
-   
+
+    const handleSorted = (value) => {
+        if (value === 'oldToNew') {
+
+            const sorted = [...call].sort((a, b) => new Date(a.atCreated) - new Date(b.atCreated));
+            setCall(sorted)
+        }
+        else if(value === 'newToOld'){
+            const sorted = [...call].sort((a, b) => new Date(b.atCreated) - new Date(a.atCreated));
+            setCall(sorted)
+        }
+    }
 
 
     return (
@@ -16,8 +27,8 @@ const TimeLine = () => {
             <details className="dropdown mt-4">
                 <summary className="btn m-1">Filter timeline</summary>
                 <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li><a>Oldest to Newest</a></li>
-                    <li><a>Newest To Oldest</a></li>
+                    <li onClick={() => handleSorted('oldToNew')}><a>Oldest to Newest</a></li>
+                    <li onClick={()=>handleSorted('newToOld')}><a>Newest To Oldest</a></li>
                 </ul>
             </details>
             {

@@ -14,7 +14,8 @@ const QuicCkIn = ({ name }) => {
         const callData={
             type: c,
             name:name,
-            date:formatted
+            date:formatted,
+            atCreated: Date.now()
         }
         setCall([...call,callData])
         toast.success(`${name} ${c} successfully`)
