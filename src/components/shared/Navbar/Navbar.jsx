@@ -18,7 +18,7 @@ const Navbar = () => {
       <div className="container mx-auto navbar">
 
         <Link to={'/'} className=" hidden md:flex flex-1">
-          <img src={navLogo} width={141} height={31} fetchpriority="high" alt=""  decoding="async" decoding="async" decoding="async"/>
+          <img src={navLogo} width={141} height={31} fetchpriority="high" alt=""  decoding="async"/>
         </Link>
         <div className="flex-none">
           <ul className="flex items-center px-1 gap-5 text-[#64748B]">
