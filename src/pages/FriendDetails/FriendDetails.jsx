@@ -55,6 +55,7 @@ const FriendDetails = () => {
                                 </div>
                             </div>
                             <p className='font-medium text-[16px] mt-2 text-[#64748B]'>"{bio}"</p>
+                            <p className='font-semibold text-sm mt-1 text-[#244D3F]'>{email}</p>
                         </div>
                     </Link>
 

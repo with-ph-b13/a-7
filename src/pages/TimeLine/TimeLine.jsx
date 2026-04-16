@@ -8,6 +8,9 @@ const TimeLine = () => {
     const { call, setCall } = useContext(FriendsContext);
 
 
+    const [filterType, setFilterType] = React.useState('All');
+
+
     const handleSorted = (value) => {
         if (value === 'oldToNew') {
 
@@ -20,21 +23,39 @@ const TimeLine = () => {
         }
     }
 
+    const displayedCalls = call.filter(item => {
+        if (filterType === 'All') return true;
+        return item.type === filterType;
+    });
+
 
     return (
         <div className='container mx-auto mt-10 px-4 md:px-0'>
             <h1 className='text-5xl font-bold'>Timeline </h1>
-            <details className="dropdown mt-4">
-                <summary className="btn m-1">Filter timeline</summary>
-                <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
-                    <li onClick={() => handleSorted('oldToNew')}><a>Oldest to Newest</a></li>
-                    <li onClick={()=>handleSorted('newToOld')}><a>Newest To Oldest</a></li>
-                </ul>
-            </details>
+            <div className="flex gap-4">
+                <details className="dropdown mt-4">
+                    <summary className="btn m-1">Filter by Type</summary>
+                    <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li onClick={() => setFilterType('All')}><a>All Interactions</a></li>
+                        <li onClick={() => setFilterType('Call')}><a>Call</a></li>
+                        <li onClick={() => setFilterType('Text')}><a>Text</a></li>
+                        <li onClick={() => setFilterType('Video')}><a>Video</a></li>
+                    </ul>
+                </details>
+
+                <details className="dropdown mt-4">
+                    <summary className="btn m-1">Sort by Date</summary>
+                    <ul className="menu dropdown-content bg-base-100 rounded-box z-1 w-52 p-2 shadow-sm">
+                        <li onClick={() => handleSorted('oldToNew')}><a>Oldest to Newest</a></li>
+                        <li onClick={() => handleSorted('newToOld')}><a>Newest To Oldest</a></li>
+                    </ul>
+                </details>
+            </div>
+
             {
-                call.length >= 1 ? <div>
+                displayedCalls.length >= 1 ? <div>
                     {
-                        call.map(callNotification => {
+                        displayedCalls.map(callNotification => {
                             return <div className="w-full px-5 py-2 border border-gray-300 shadow rounded-2xl flex items-center gap-5 mt-4">
                                 {
                                     callNotification.type === "Call" && <div>
