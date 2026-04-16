@@ -1,8 +1,8 @@
-# 👥 KeenKeeper — Keep Your Friendships Alive
+# KeenKeeper — Keep Your Friendships Alive
 
 KeenKeeper is a relationship management tool designed to help you nurture and maintain your meaningful connections. It tracks your interactions and reminds you when it's time to reach out to a friend.
 
-## 🚀 Technologies Used
+## Technologies Used
 - **React.js**: For building a dynamic and responsive user interface.
 - **Tailwind CSS & DaisyUI**: For modern, sleek styling and layout.
 - **React Router**: For seamless navigation between Home, Timeline, and Stats pages.
